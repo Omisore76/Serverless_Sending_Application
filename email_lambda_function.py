@@ -7,7 +7,7 @@ def lambda_handler(event, context):
         Source='hodote76@gmail.com',
         Destination={
             'ToAddresses': [
-                event['destinationEmail'],
+                event['RecipientEmail'],
             ]
         },
         Message={
@@ -16,7 +16,7 @@ def lambda_handler(event, context):
             },
             'Body': {
                 'Text': {
-                    'Data': event['message']
+                    'Data': event['Message']
                 }
             }
         }
