@@ -1,4 +1,4 @@
 {
-    "destinationEmail": "temitopeomisore235@gmail.com",
-    "message": "Let's test our email lambda function"
+    "DestinationEmail": "temitopeomisore235@gmail.com",
+    "Message": "Let's test our email lambda function"
   }
