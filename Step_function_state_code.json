@@ -1,0 +1,31 @@
+{
+    "Comment": "Simple state machine for sending SMS or email",
+    "StartAt": "Select Sending Type",
+    "States": {
+        "Select Sending Type": {
+            "Type": "Choice",
+            "Choices": [
+                {
+                    "Variable": "$.SendingType",
+                    "StringEquals": "email",
+                    "Next": "Email"
+                },
+                {
+                    "Variable": "$.SendingType",
+                    "StringEquals": "sms",
+                    "Next": "SMS"
+                }
+            ]
+        },
+        "Email": {
+            "Type" : "Task",
+            "Resource": "arn:aws:lambda:us-east-1:658387634975:function:email",
+            "End": true
+        },
+        "SMS": {
+            "Type" : "Task",
+            "Resource": "arn:aws:lambda:us-east-1:658387634975:function:sms",
+            "End": true
+        }
+    }
+}
