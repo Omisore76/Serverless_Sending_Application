@@ -1,0 +1,3 @@
+{
+    "body": "{\"SendingType\":\"sms\", \"RecipientEmail\":\"temitopeomisore235@gmail.com\", \"RecipientNumber\":\"+2349057128517\", \"Message\":\"Sent from REST API Handler\"}"
+}
